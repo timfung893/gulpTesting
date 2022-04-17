@@ -1,0 +1,24 @@
+.header-top {
+  @include flex-row;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.navbar {
+  @include flex-row;
+  gap: 50px;
+
+  &-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary-color-wh);
+  }
+
+  &-item:hover {
+    list-style: disc;
+    color: var(--primary-color-wh);
+    & a {
+      opacity: 1;
+    }
+  }
+}

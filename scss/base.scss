@@ -1,0 +1,141 @@
+:root {
+  --primary-color-bl: #222120;
+  --primary-color-wh: #f8f3ed;
+  --font-color-wh: #faf5ef;
+  --font-color-bl: #222120;
+  --gray: #faf5ef;
+  --primary-font: "Prata";
+  --secondary-font: "DM Sans";
+  --title-font-size: 70px;
+  --text-font-size: 24px;
+  --nav-font-size: 18px;
+}
+
+// body
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  overflow: break-word;
+}
+
+body {
+  font-family: var(--secondary-font);
+  background-color: var(--primary-color-bl);
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title-wh {
+  font-size: 82px;
+  font-weight: 400;
+  line-height: 81px;
+  color: var(--primary-color-wh);
+  font-family: var(--primary-font);
+}
+
+.title-bl {
+  font-size: 82px;
+  font-weight: 400;
+  line-height: 81px;
+  color: var(--primary-color-bl);
+  font-family: var(--primary-font);
+}
+
+.title-sub {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 61px;
+  color: var(--primary-color-bl);
+  font-family: var(--primary-font);
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--primary-color-bl);
+  font-family: var(--primary-font);
+}
+
+.text-item {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  color: var(--primary-color-wh);
+  font-family: var(--secondary-font);
+}
+
+.header_text-item {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #fff;
+  font-family: var(--secondary-font);
+}
+
+.nav-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--gray);
+  font-family: var(--secondary-font);
+  transition: 0.2s ease;
+  opacity: 0.4;
+}
+
+.btn-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-decoration: underline;
+  color: var(--gray);
+  font-family: var(--primary-font);
+  transition: 0.2s ease;
+}
+
+.footer-text {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 72px;
+  color: var(--primary-color-bl);
+  font-family: var(--primary-font);
+}
+// mixins
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin maxw($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin minw($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
