@@ -1,5 +1,5 @@
 {
-  "name": "new-page",
+  "name": "heling",
   "version": "1.0.0",
   "description": "This is a page to test gulp",
   "main": "gulpfile.js",
@@ -17,5 +17,13 @@
   "dependencies": {
     "node-sass": "^7.0.1",
     "sass": "^1.50.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timfung893/Heling-with-Gulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timfung893/Heling-with-Gulp/issues"
+  },
+  "homepage": "https://github.com/timfung893/Heling-with-Gulp#readme"
 }

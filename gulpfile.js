@@ -1,12 +1,12 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const browserSync = require("browser-sync").create();
-// compile sass
 
+// compile sass
 function style() {
   return (
     gulp
-      .src("./scss/**/*.scss")
+      .src("./scss/style.scss")
       .pipe(sass())
       .on("error", sass.logError)
       .pipe(gulp.dest("./css"))
@@ -15,6 +15,7 @@ function style() {
   );
 }
 
+// init sync and watch for changes
 function watch() {
   browserSync.init({
     server: {
@@ -23,7 +24,7 @@ function watch() {
   });
 
   //   watch for changes in sass & html and reload
-  gulp.watch("./scss/**/*.scss", style);
+  gulp.watch("./scss/*.scss", style);
   gulp.watch("./*.html").on("change", browserSync.reload);
 }
 

@@ -1,7 +1,5 @@
-$color: red;
-
-body {
-  background: blue;
-  height: 400vh;
-  color: $color;
-}
+@import "reset";
+@import "base";
+@import "body";
+@import "header";
+@import "footer";
