@@ -1,24 +1,31 @@
-.header-top {
-  @include flex-row;
-  align-items: center;
-  padding: 30px 0;
+.about-us {
+  @include flex-column;
+  background-color: var(--primary-color-wh);
+  padding-top: 300px;
 }
 
-.navbar {
+.main-1 {
   @include flex-row;
-  gap: 50px;
+  margin-bottom: 170px;
+  gap: 230px;
 
-  &-btn {
-    background: transparent;
-    border: none;
-    color: var(--primary-color-wh);
+  &_title {
+    font-style: normal;
+  }
+}
+
+.main-2 {
+  @include flex-row;
+  margin-bottom: 170px;
+  gap: 140px;
+
+  &_desc {
+    @include flex-column;
+    margin-top: 130px;
+    gap: 40px;
   }
 
-  &-item:hover {
-    list-style: disc;
-    color: var(--primary-color-wh);
-    & a {
-      opacity: 1;
-    }
+  &_img {
+    color: var(--primary-color-bl);
   }
 }

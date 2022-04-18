@@ -36,8 +36,7 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
-
-.title-wh {
+.title-main-wh {
   font-size: 82px;
   font-weight: 400;
   line-height: 81px;
@@ -45,10 +44,18 @@ body {
   font-family: var(--primary-font);
 }
 
-.title-bl {
-  font-size: 82px;
+.title-wh {
+  font-size: 70px;
   font-weight: 400;
-  line-height: 81px;
+  line-height: 76px;
+  color: var(--primary-color-wh);
+  font-family: var(--primary-font);
+}
+
+.title-bl {
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 76px;
   color: var(--primary-color-bl);
   font-family: var(--primary-font);
 }
@@ -73,8 +80,9 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
-  color: var(--primary-color-wh);
+  color: var(--primary-color-bl);
   font-family: var(--secondary-font);
+  opacity: 0.7;
 }
 
 .header_text-item {
@@ -83,6 +91,10 @@ body {
   line-height: 30px;
   color: #fff;
   font-family: var(--secondary-font);
+  opacity: 0.6;
+  display: inline-block;
+  max-width: 400px;
+  margin-left: 90px;
 }
 
 .nav-text {
