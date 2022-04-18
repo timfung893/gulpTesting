@@ -74,7 +74,7 @@ body {
   margin: 0 auto;
 }
 
-.title-wh {
+.title-main-wh {
   font-size: 82px;
   font-weight: 400;
   line-height: 81px;
@@ -82,10 +82,18 @@ body {
   font-family: var(--primary-font);
 }
 
-.title-bl {
-  font-size: 82px;
+.title-wh {
+  font-size: 70px;
   font-weight: 400;
-  line-height: 81px;
+  line-height: 76px;
+  color: var(--primary-color-wh);
+  font-family: var(--primary-font);
+}
+
+.title-bl {
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 76px;
   color: var(--primary-color-bl);
   font-family: var(--primary-font);
 }
@@ -110,8 +118,9 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
-  color: var(--primary-color-wh);
+  color: var(--primary-color-bl);
   font-family: var(--secondary-font);
+  opacity: 0.7;
 }
 
 .header_text-item {
@@ -120,6 +129,10 @@ body {
   line-height: 30px;
   color: #fff;
   font-family: var(--secondary-font);
+  opacity: 0.6;
+  display: inline-block;
+  max-width: 400px;
+  margin-left: 90px;
 }
 
 .nav-text {
@@ -150,6 +163,19 @@ body {
   font-family: var(--primary-font);
 }
 
+.header {
+  position: relative;
+}
+.header-line {
+  max-width: 1600px;
+}
+.header-logo {
+  position: absolute;
+  bottom: 0;
+  top: 85%;
+  z-index: 99;
+}
+
 .header-top {
   display: flex;
   flex-direction: row;
@@ -177,4 +203,69 @@ body {
 }
 .navbar-item:hover a {
   opacity: 1;
+}
+
+.header-mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 130px;
+  gap: 20px;
+}
+
+.header-motto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.header-motto_img {
+  margin-left: 90px;
+}
+
+.header-motto_title-down {
+  margin-left: 140px;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color-wh);
+  padding-top: 300px;
+}
+
+.main-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 170px;
+  gap: 230px;
+}
+.main-1_title {
+  font-style: normal;
+}
+
+.main-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 170px;
+  gap: 140px;
+}
+.main-2_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+  gap: 40px;
+}
+.main-2_img {
+  color: var(--primary-color-bl);
 }

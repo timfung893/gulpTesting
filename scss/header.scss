@@ -1,0 +1,56 @@
+.header {
+  position: relative;
+  &-line {
+    max-width: 1600px;
+  }
+  &-logo {
+    position: absolute;
+    bottom: 0;
+    top: 85%;
+    z-index: 99;
+  }
+}
+
+.header-top {
+  @include flex-row;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.navbar {
+  @include flex-row;
+  gap: 50px;
+
+  &-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary-color-wh);
+  }
+
+  &-item:hover {
+    list-style: disc;
+    color: var(--primary-color-wh);
+    & a {
+      opacity: 1;
+    }
+  }
+}
+
+.header-mid {
+  @include flex-row;
+  margin-top: 130px;
+  gap: 20px;
+}
+
+.header-motto {
+  @include flex-column;
+  gap: 50px;
+
+  &_img {
+    margin-left: 90px;
+  }
+}
+
+.header-motto_title-down {
+  margin-left: 140px;
+}
