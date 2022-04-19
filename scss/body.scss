@@ -1,16 +1,23 @@
+// ABOUT
+
 .about-us {
   @include flex-column;
   background-color: var(--primary-color-wh);
-  padding-top: 300px;
+  padding-top: 260px;
 }
 
 .main-1 {
   @include flex-row;
-  margin-bottom: 170px;
+  margin-bottom: 150px;
   gap: 230px;
 
   &_title {
-    font-style: normal;
+    width: 100%;
+    max-width: 388px;
+  }
+
+  &_desc {
+    max-width: 638px;
   }
 }
 
@@ -27,5 +34,71 @@
 
   &_img {
     color: var(--primary-color-bl);
+  }
+}
+
+// PROJECTS
+
+.projects {
+  padding-top: 170px;
+  background: var(--primary-color-wh);
+
+  &-heading {
+    @include flex-row;
+    gap: 519px;
+    margin-bottom: 60px;
+
+    &_title {
+      width: 100%;
+      max-width: 619px;
+      font-size: 70px;
+      line-height: calc(76 / 70);
+    }
+
+    &_child {
+      font-size: 24px;
+      line-height: calc(30 / 24);
+      font-weight: 400;
+      font-family: var(--primary-font);
+      text-decoration: underline;
+    }
+  }
+
+  // PJ LIST
+
+  &-item {
+    position: relative;
+  }
+
+  &-img {
+    & img {
+      width: 100%;
+      max-height: 712px;
+      object-fit: cover;
+    }
+  }
+
+  &-desc {
+    position: absolute;
+    bottom: 0;
+    transform: translate(168px, -65px);
+
+    & h2 {
+      font-size: 50px;
+      line-height: calc(62 / 50);
+      color: var(--primary-color-wh);
+      font-weight: 500;
+      font-family: var(--secondary-font);
+      margin-bottom: 10px;
+    }
+
+    & p {
+      font-size: 24px;
+      line-height: calc(30 / 24);
+      font-weight: 400;
+      color: var(--primary-color-wh);
+      font-family: var(--primary-font);
+      text-decoration: underline;
+    }
   }
 }
