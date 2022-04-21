@@ -61,6 +61,7 @@
       font-weight: 400;
       font-family: var(--primary-font);
       text-decoration: underline;
+      color: var(--primary-color-bl);
     }
   }
 
@@ -99,6 +100,86 @@
       color: var(--primary-color-wh);
       font-family: var(--primary-font);
       text-decoration: underline;
+    }
+  }
+}
+
+// DESIGNER
+
+.design {
+  padding-top: 160px;
+
+  &-main {
+    @include flex-row;
+    gap: 140px;
+
+    &_desc {
+      @include flex-column;
+      align-items: flex-start;
+      gap: 30px;
+
+      & p:nth-child(2) {
+        margin-top: 25px;
+      }
+
+      & a {
+        font-family: var(--primary-font);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// BLOG
+
+.blog {
+  background: var(--primary-color-wh);
+  padding: 170px 0;
+
+  &-main {
+    @include flex-column;
+    align-items: center;
+
+    & h2 {
+      margin-bottom: 55px;
+    }
+  }
+
+  &-btn {
+    font-family: var(--primary-font);
+    text-decoration: underline;
+    font-weight: 600;
+    margin-bottom: 160px;
+  }
+
+  &-articles {
+    @include flex-row;
+    gap: 32px;
+
+    &_item {
+      @include flex-column;
+      align-items: flex-start;
+      gap: 30px;
+
+      &-h3 {
+        margin-top: 35px;
+      }
+    }
+
+    &_info {
+      @include flex-row;
+      width: 100%;
+      max-width: 536px;
+
+      & a {
+        text-decoration: underline;
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      & p {
+        font-size: 18px;
+      }
     }
   }
 }
