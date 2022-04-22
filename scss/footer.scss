@@ -47,6 +47,7 @@
         font-size: 30px;
         line-height: calc(34 / 30);
         padding-left: 30px;
+
         &::before {
           position: absolute;
           content: "";
@@ -82,6 +83,62 @@
     justify-content: space-between;
     & p {
       color: #999393;
+    }
+  }
+  &-footer-img-mobile {
+    display: none;
+  }
+
+  @include maxw(1023px) {
+    &-btn {
+      & button,
+      p {
+        display: none;
+      }
+    }
+    &-footer-img-mobile {
+      display: block;
+    }
+
+    &-main {
+      align-items: center;
+      flex-direction: column;
+
+      &_contact {
+        & p:nth-child(2) {
+          font-size: 36px;
+          line-height: calc(42 / 36);
+        }
+
+        & span {
+          font-size: 24px;
+          line-height: calc(34 / 24);
+        }
+      }
+
+      &_info {
+        & h4 {
+          font-size: 30px;
+          line-height: calc(30 / 30);
+          margin-top: 80px;
+        }
+      }
+
+      & img {
+        max-width: 396px;
+      }
+    }
+
+    &-line {
+      margin-top: 60px;
+    }
+
+    &-copyright {
+      margin-top: 0;
+      padding: 36px 0;
+      & img {
+        display: none;
+      }
     }
   }
 }

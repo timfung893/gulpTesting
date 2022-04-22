@@ -26,6 +26,7 @@
   &-images {
     margin-bottom: -5px;
   }
+
   &-line {
     max-width: 1600px;
   }
@@ -68,7 +69,6 @@
   @include maxw(1023px) {
     .navbar {
       @include flex-column;
-      display: none;
       position: fixed;
       top: 0;
       right: 0;
@@ -76,10 +76,13 @@
       gap: 30px;
       width: 200px;
       background-color: var(--primary-color-wh);
-      z-index: 99;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: 0.24s linear;
+      pointer-events: none;
 
       &.active {
-        display: flex;
+        transform: translateX(0);
       }
 
       &-item {
@@ -107,7 +110,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 5px;
-        margin-left: 10px;
+        margin-left: 20px;
 
         & span:nth-child(1) {
           background-color: var(--primary-color-wh);
@@ -122,51 +125,51 @@
         }
       }
     }
-  }
 
-  &-mid {
-    @include flex-column;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    margin-bottom: 57px;
-  }
+    &-mid {
+      @include flex-column;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-bottom: 57px;
+    }
 
-  &-images {
-    @include flex-row;
-    align-self: stretch;
-    position: relative;
-    margin-bottom: 80px;
-
-    & img:nth-child(1) {
+    &-images {
+      @include flex-row;
       align-self: stretch;
-      max-width: 330px;
-    }
-  }
+      position: relative;
+      margin-bottom: 80px;
 
-  &-logo {
-    bottom: 30px;
-    right: 0;
-    left: auto;
-    max-width: 150px;
-    max-height: 188px;
-    transform: none;
-  }
-
-  &-motto {
-    align-items: flex-start;
-    & h1 {
-      font-size: 46px;
-      line-height: calc(56 / 46);
+      & img:nth-child(1) {
+        align-self: stretch;
+        max-width: 330px;
+      }
     }
 
-    & p {
-      font-style: 18px;
+    &-logo {
+      bottom: 30px;
+      right: 0;
+      left: auto;
+      max-width: 150px;
+      max-height: 188px;
+      transform: none;
     }
 
-    & span,
-    img,
-    p {
-      margin-left: 0;
+    &-motto {
+      align-items: flex-start;
+      & h1 {
+        font-size: 46px;
+        line-height: calc(56 / 46);
+      }
+
+      & p {
+        font-style: 18px;
+      }
+
+      & span,
+      img,
+      p {
+        margin-left: 0;
+      }
     }
   }
 }
