@@ -85,7 +85,8 @@
       color: #999393;
     }
   }
-  &-footer-img-mobile {
+
+  &-img-mobile {
     display: none;
   }
 
@@ -139,6 +140,10 @@
       & img {
         display: none;
       }
+    }
+
+    &-img-mobile {
+      display: block;
     }
   }
 }
