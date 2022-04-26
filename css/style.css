@@ -748,7 +748,6 @@ body {
     display: block;
   }
   .footer-main {
-    align-items: center;
     flex-direction: column;
   }
   .footer-main_contact p:nth-child(2) {
@@ -780,4 +779,119 @@ body {
   .footer-img-mobile {
     display: block;
   }
+}
+
+.access {
+  position: fixed;
+  right: 10px;
+  top: 80%;
+}
+.access-wrapper {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.access-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.access-checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  left: 0;
+  z-index: 99;
+}
+.access-checkbox:checked ~ .access-content {
+  transform: scale(1);
+  opacity: 1;
+}
+.access-checkbox:checked ~ .access-icon .access-icon-wrapper {
+  background: rgba(13, 13, 13, 0.6);
+}
+.access-checkbox:checked ~ .access-icon .access-icon-wrapper .access-icon-btn::after {
+  transform: translate(-50%, -50%) rotate(-135deg);
+  border: 2px solid white;
+  background: white;
+}
+.access-checkbox:checked ~ .access-icon .access-icon-wrapper .access-icon-btn::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+  border: 2px solid white;
+  background: white;
+}
+.access-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.access-icon-wrapper {
+  display: block;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  background-color: white;
+  height: 100%;
+  box-shadow: 2px 2px 2px grey;
+}
+.access-icon-btn {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+}
+.access-icon-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  transform: translate(-50%, -50%);
+  border: 2px solid grey;
+  background: grey;
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.access-icon-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  transform: translate(-50%, -50%) rotate(90deg);
+  border: 2px solid grey;
+  background: grey;
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.access-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: 80px;
+  top: -250%;
+  height: 200%;
+  transition: 0.4s ease-in-out;
+  background-color: bisque;
+  width: 136px;
+  transform: scale(0);
+  opacity: 0;
+  border-radius: 10px;
+  padding: 5px;
+  user-select: none;
+  transition: ease 0.3s;
+}
+.access-content a {
+  text-decoration: none;
+  color: black;
+}
+.access-content a:nth-child(-n+2) {
+  border-bottom: 1px solid grey;
+}
+.access-content a:hover {
+  background-color: rgb(201, 163, 117);
 }
