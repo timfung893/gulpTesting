@@ -6,6 +6,9 @@
     background: transparent;
     border: none;
     color: var(--primary-color-wh);
+    & a {
+      cursor: pointer;
+    }
   }
 
   &-item:hover {
@@ -64,22 +67,28 @@
     }
   }
 
-  // UNDER 1024PX
+  // UNDER 767PX
 
-  @include maxw(1023px) {
+  @include maxw(767px) {
+    // &-top {
+    //   position: fixed;
+    //   width: 100%;
+    //   margin: 0 auto;
+    // }
     .navbar {
       @include flex-column;
       position: fixed;
       top: 0;
       right: 0;
       bottom: 0;
-      gap: 30px;
-      width: 200px;
+      gap: 90px;
+      width: 300px;
       background-color: var(--primary-color-wh);
       z-index: 999;
       transform: translateX(100%);
-      transition: 0.24s linear;
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
       pointer-events: none;
+      border-radius: 20px 0 20px 0;
 
       &.active {
         transform: translateX(0);
@@ -95,6 +104,7 @@
 
       &-link {
         color: var(--primary-color-bl);
+        font-size: 35px;
       }
 
       &-btn {
@@ -111,17 +121,20 @@
         justify-content: center;
         gap: 5px;
         margin-left: 20px;
+        cursor: pointer;
 
-        & span:nth-child(1) {
+        & span {
+          pointer-events: none;
           background-color: var(--primary-color-wh);
-          width: 15px;
-          height: 4px;
-        }
 
-        & span:nth-child(2) {
-          background-color: var(--primary-color-wh);
-          width: 30px;
-          height: 4px;
+          &:nth-child(1) {
+            width: 15px;
+            height: 4px;
+          }
+          &:nth-child(2) {
+            width: 30px;
+            height: 4px;
+          }
         }
       }
     }
