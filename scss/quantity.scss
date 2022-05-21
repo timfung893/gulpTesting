@@ -1,0 +1,33 @@
+.quantity-form-wishlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(209, 202, 202);
+  height: 32px;
+  width: 100px;
+  border-radius: 8px;
+
+  & .quantity {
+    max-width: 50px;
+    display: inline-block;
+    border: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  & .plus,
+  .minus {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #999999;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #fba700;
+    }
+  }
+}
