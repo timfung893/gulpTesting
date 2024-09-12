@@ -204,7 +204,8 @@ body {
   margin-bottom: -5px;
 }
 .header-line {
-  max-width: 1600px;
+  display: block;
+  width: 100%;
 }
 .header-logo {
   position: absolute;
@@ -258,7 +259,6 @@ body {
     z-index: 999;
     transform: translateX(100%);
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    pointer-events: none;
     border-radius: 20px 0 20px 0;
   }
   .header .navbar.active {
@@ -268,12 +268,13 @@ body {
     margin-right: auto;
     margin-left: 20px;
   }
-  .header .navbar-item:hover {
-    color: black;
-  }
   .header .navbar-link {
     color: var(--primary-color-bl);
     font-size: 35px;
+    transition: color 0.3s linear;
+  }
+  .header .navbar-link:hover {
+    color: black;
   }
   .header .navbar-btn {
     display: flex;
@@ -423,6 +424,8 @@ body {
     line-height: 1.1666666667;
   }
   .main-2 img {
+    display: block;
+    width: 100%;
     max-width: 396px;
     max-height: 561px;
   }

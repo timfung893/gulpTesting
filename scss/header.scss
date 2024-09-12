@@ -31,7 +31,8 @@
   }
 
   &-line {
-    max-width: 1600px;
+    display: block;
+    width: 100%;
   }
 
   &-logo {
@@ -87,7 +88,6 @@
       z-index: 999;
       transform: translateX(100%);
       transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-      pointer-events: none;
       border-radius: 20px 0 20px 0;
 
       &.active {
@@ -97,14 +97,15 @@
       &-item {
         margin-right: auto;
         margin-left: 20px;
-        &:hover {
-          color: black;
-        }
       }
 
       &-link {
         color: var(--primary-color-bl);
         font-size: 35px;
+        transition: color 0.3s linear;
+        &:hover {
+          color: black;
+        }
       }
 
       &-btn {
